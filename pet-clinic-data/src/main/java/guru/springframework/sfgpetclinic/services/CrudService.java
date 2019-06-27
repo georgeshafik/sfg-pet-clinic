@@ -6,7 +6,7 @@ import java.util.Set;
  * Created by gs on 2019-06-26
  *
  * We are refactoring out the common services into a common interface
- * similar to the way Spring Crud Repository through generics
+ * similar to the way Spring Crud Repository through generics works
  *
  */
 public interface CrudService<T, ID> {

@@ -1,15 +1,29 @@
 package guru.springframework.sfgpetclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
  * Created by gs on 2019-06-24
  */
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity {
 
+    @Column(name = "name")
     private String name;
+
+    // Many pets can be owned by the same owner
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
-    private Owner owner;
+
+    // Many pets can be owned by the same owner
+    @ManyToOne
+    @JoinColumn(name = "owner_id") // this tells JPA how to perform the mapping basically
+    private Owner owner;           // copy owner_id from the owner table to owner column of the pets table
+
+    @Column(name = "birth_date")
     private LocalDate birthdate;
 
     public String getName() {

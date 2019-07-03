@@ -1,11 +1,18 @@
 package guru.springframework.sfgpetclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * Created by gs on 2019-06-28
  */
-public class Speciality extends BaseEntity {
+@Entity
+@Table(name = "specialties")
+public class Specialty extends BaseEntity {
 
-  private String description;
+    @Column(name = "description")
+    private String description;
 
     public String getDescription() {
         return description;

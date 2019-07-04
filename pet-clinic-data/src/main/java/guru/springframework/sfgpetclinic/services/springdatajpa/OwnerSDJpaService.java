@@ -20,7 +20,7 @@ import java.util.Set;
 // 1. OwnerServiceMap
 // 2. OwnerSDJpaService
 // Only one owner service can be used at runtime.
-// Using a profile ensures we activate or de-active a given owner service ensure on one is used.
+// Using a profile ensures we activate or de-active a given owner service ensuring only one is used.
 @Service
 @Profile("springdatajpa")
 public class OwnerSDJpaService implements OwnerService {
@@ -44,9 +44,7 @@ public class OwnerSDJpaService implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         Set<Owner> owners = new HashSet<>();
-
         ownerRepository.findAll().forEach(owners::add);
-
         return owners;
     }
 

@@ -16,18 +16,18 @@ public class Vet extends Person {
         name = "vet_specialties",
             joinColumns = @JoinColumn(name = "vet_id"),
                 inverseJoinColumns = @JoinColumn(name = "specialty_id"))
-    private Set<Specialty> specialities;
+    private Set<Speciality> specialities;
 
     public Vet() {
         super();
         this.specialities = new HashSet<>();
     }
 
-    public Set<Specialty> getSpecialities() {
+    public Set<Speciality> getSpecialities() {
         return specialities;
     }
 
-    public void setSpecialities(Set<Specialty> specialities) {
+    public void setSpecialities(Set<Speciality> specialities) {
         this.specialities = specialities;
     }
 }

@@ -5,6 +5,7 @@ import guru.springframework.sfgpetclinic.model.Pet;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.sfgpetclinic.services.PetService;
 import guru.springframework.sfgpetclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -13,6 +14,7 @@ import java.util.Set;
  * Created by gs on 2019-06-26
  */
 @Service
+@Profile({"default","map"})
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
@@ -45,7 +47,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
             if (object.getPets() != null) {
                 // we can have more than one pet
                 object.getPets().forEach( pet -> {
-                    if(pet.getPetType().getId() == null) {
+                    if(pet.getPetType().getId() != null) {
                         // We set the service type to the pet type while saving the pet type!
                         pet.setPetType(petTypeService.save(pet.getPetType()));
                     } else {

@@ -26,7 +26,7 @@ public class Pet extends BaseEntity {
     private Owner owner;           // copy owner_id from the owner table to owner column of the pets table
 
     @Column(name = "birth_date")
-    private LocalDate birthdate;
+    private LocalDate birthDate;
 
     // A pet can visit a vet many times
     // A given pet can have many visits - a set of visits
@@ -57,12 +57,12 @@ public class Pet extends BaseEntity {
         this.owner = owner;
     }
 
-    public LocalDate getBirthdate() {
-        return birthdate;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthdate(LocalDate birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public Set<Visit> getVisits() {

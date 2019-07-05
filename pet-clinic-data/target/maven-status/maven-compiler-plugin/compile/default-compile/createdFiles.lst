@@ -10,10 +10,12 @@ guru/springframework/sfgpetclinic/services/springdatajpa/VetSDJpaService.class
 guru/springframework/sfgpetclinic/services/PetTypeService.class
 guru/springframework/sfgpetclinic/services/map/PetServiceMap.class
 guru/springframework/sfgpetclinic/services/VisitService.class
+guru/springframework/sfgpetclinic/model/PetType$PetTypeBuilder.class
 guru/springframework/sfgpetclinic/model/Owner.class
 guru/springframework/sfgpetclinic/services/springdatajpa/VisitSDJpaService.class
 guru/springframework/sfgpetclinic/model/Vet.class
 guru/springframework/sfgpetclinic/repository/PetRepository.class
+guru/springframework/sfgpetclinic/model/Pet$PetBuilder.class
 guru/springframework/sfgpetclinic/services/springdatajpa/PetSDJpaService.class
 guru/springframework/sfgpetclinic/model/Person.class
 guru/springframework/sfgpetclinic/services/map/OwnerServiceMap.class
@@ -22,6 +24,7 @@ guru/springframework/sfgpetclinic/repository/VisitRepository.class
 guru/springframework/sfgpetclinic/repository/SpecialtyRepository.class
 guru/springframework/sfgpetclinic/services/VetService.class
 guru/springframework/sfgpetclinic/services/map/SpecialtyServiceMap.class
+guru/springframework/sfgpetclinic/model/Owner$OwnerBuilder.class
 guru/springframework/sfgpetclinic/model/PetType.class
 guru/springframework/sfgpetclinic/services/SpecialtyService.class
 guru/springframework/sfgpetclinic/model/Speciality.class
@@ -30,5 +33,8 @@ guru/springframework/sfgpetclinic/repository/PetTypeRepository.class
 guru/springframework/sfgpetclinic/repository/OwnerRepository.class
 guru/springframework/sfgpetclinic/model/BaseEntity.class
 guru/springframework/sfgpetclinic/services/map/PetTypeServiceMap.class
+guru/springframework/sfgpetclinic/model/Visit$VisitBuilder.class
+guru/springframework/sfgpetclinic/model/Speciality$SpecialityBuilder.class
 guru/springframework/sfgpetclinic/services/springdatajpa/PetTypeSDJpaService.class
+guru/springframework/sfgpetclinic/model/Vet$VetBuilder.class
 guru/springframework/sfgpetclinic/services/OwnerService.class

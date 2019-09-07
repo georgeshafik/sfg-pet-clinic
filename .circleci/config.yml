@@ -30,6 +30,12 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
+      # Forces maven to download everything
+      # Will install the modules into the local maven cache
+      # It will skip the test till it gets to runing integration-test
+      # Because we have one module dependant on another we need to perform the build this way
+      - run: mvn install -DskipTests
+
       - run: mvn dependency:go-offline
 
       - save_cache:
@@ -38,5 +44,5 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      # - run: mvn integration-test
-      - run: mvn install
+      - run: mvn integration-test
+      # - run: mvn install
